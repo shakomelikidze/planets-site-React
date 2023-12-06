@@ -1,7 +1,7 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import data from '../../../data.json'
-// import Source from '../../assets/icon-source.svg';
 import Mercury from '../../assets/planet-mercury.svg'
 import Venus from '../../assets/planet-venus.svg'
 import Earth from '../../assets/planet-earth.svg'
@@ -12,18 +12,27 @@ import Uranus from '../../assets/planet-uranus.svg'
 import Neptune from '../../assets/planet-neptune.svg'
 import Source from '../../assets/icon-source.svg'
 
-import * as planetImages from '../../assets';
 
 function Planet() {
   const params = useParams();
   const planetData = data.find((item) => item.name.toLocaleLowerCase() == params.planet)
-  const planetImage = planetImages[params.planet.toLowerCase()];
+  const [planetImage, setPlanetImage] = useState(null);
+  useEffect(() => {
+    const importImage = async () => {
+      try {
+        const module = await import(`../../assets/planet-${params.planet.toLowerCase()}.svg`);
+        setPlanetImage(module.default);
+      } catch (error) {
+        console.error('Error loading planet image:', error);
+      }
+    };
 
+    importImage();
+  }, [params.planet]);
   return (
     <>
       <section>
-      <img src={planetImage} alt={planetData.name} />
-        {/* <img src={Mercury} alt="" /> */}
+      {planetImage && <img className='planet-img' src={planetImage} alt={planetData.name} />}
         <div className="info-box">
           <p className="planet-name">{planetData.name}</p>
           <p className="about">{planetData.overview.content}</p>

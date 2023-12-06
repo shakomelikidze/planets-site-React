@@ -68,6 +68,10 @@ section {
   align-items: center;
 }
 
+.planet-img {
+  width: 500px;
+}
+
 .info-box {
   display: flex;
   flex-direction: column;
