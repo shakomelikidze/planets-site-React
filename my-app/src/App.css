@@ -7,8 +7,193 @@
 
 body {
   /* background-image: url('../assets/background-stars.svg'); */
-  background-color: gray;
+  background-color: black;
   width: 100%;
   height: 100vh;
 }
 
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 32px 27px 32px;
+}
+
+.logo {
+  color: #FFF;
+  font-family: Antonio;
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: -1.05px;
+  text-transform: uppercase;
+}
+
+.planets-list {
+  display: flex;
+  gap: 33px;
+}
+
+a {
+  text-decoration: none;
+  color: #838391;
+  font-family: League Spartan;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 25px; /* 227.273% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+a:hover {
+  color: white;
+  position: relative;
+}
+
+a:hover::after {
+  content: "";
+  display: block;
+  position: relative;
+  top: -53px;
+  height: 4px; 
+  background-color: #419EBB;
+  margin-bottom: -4px;
+}
+
+section {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.info-box {
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+}
+
+.planet-name {
+  color: #FFF;
+  font-family: Antonio;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: uppercase;
+}
+
+.about {
+  color: #FFF;
+  font-family: League Spartan;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 25px; 
+  margin-top: 23px;
+  height: 120px;
+}
+
+.source {
+  color: #38384F;
+  font-family: League Spartan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25px; 
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  margin-top: 24px;
+  margin-bottom: 13px;
+}
+
+.wikipedia-style {
+  opacity: 0.5;
+  color: #838391;
+  font-family: League Spartan;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px;
+  text-decoration-line: underline;
+  text-transform: capitalize;
+}
+
+.wikipedia-style:hover {
+  color: #FFF;
+}
+
+.info-type-btn {
+  color: #38384F;
+  background-color: transparent;
+  border: 1px solid #38384F;
+  opacity: 0.2;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding-left: 28px;
+  margin-top: 16px;
+}
+
+.info-type-btn:hover {
+  background: #D8D8D8;
+}
+
+.ss {
+  color: #FFF;
+  font-family: League Spartan;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 25px; 
+  letter-spacing: 2.571px;
+  text-transform: uppercase;
+  margin-left: 28px;
+}
+
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 87px;
+}
+
+.footers-info-box {
+  width: 255px;
+  height: 128px;
+  flex-shrink: 0;
+  border: 1px solid #838391;
+  padding: 20px 50px 27px 23px;
+}
+
+.title {
+  color: #838391;
+  font-family: League Spartan;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 25px; /* 227.273% */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.title-text {
+  color: #FFF;
+  font-family: Antonio;
+  font-size: 40px;
+  font-weight: 400;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+}
+
+
+
+
+@media screen and (max-width: 1000px) {
+  section {
+    flex-direction: column;
+  }
+
+}
