@@ -6,8 +6,8 @@
 }
 
 body {
-  /* background-image: url('../assets/background-stars.svg'); */
-  background-color: black;
+  background-image: url('../assets/background-stars.svg');
+  background-color: #070724;
   width: 100%;
   height: 100vh;
 }
@@ -132,17 +132,27 @@ section {
   color: #38384F;
   background-color: transparent;
   border: 1px solid #38384F;
-  opacity: 0.2;
   cursor: pointer;
   display: flex;
   align-items: center;
   height: 48px;
   padding-left: 28px;
   margin-top: 16px;
+  color: #838391;
+  font-family: League Spartan;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 25px; 
+  letter-spacing: 2.571px;
+  text-transform: uppercase;
+}
+
+.info-type-btn:focus {
+  background-color: #419EBB;
 }
 
 .info-type-btn:hover {
-  background: #D8D8D8;
+  background: #38384F;
 }
 
 .ss {
