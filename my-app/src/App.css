@@ -209,7 +209,6 @@ footer {
   text-transform: uppercase;
 }
 
-
 @media screen and (max-width: 1200px) {
   nav {
     flex-direction: column;
@@ -298,6 +297,64 @@ footer {
     padding-left: 24px;
     padding-right: 24px;
     margin-bottom: -10px;
+  }
+
+/* ---------------------------------------------- */
+    
+  .planets-list {
+    display: none;
+  }
+
+  .planets-list.visible {
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: absolute;
+    left: 10px;
+    top: 70px;
+    margin-right: 10px;
+  }
+
+
+  
+
+
+  .planet-img {
+    margin-top: 50px;
+    margin-bottom: 30px;
+  }
+
+ .info-box {
+    flex-direction: initial;
+    justify-content: initial;
+    align-items: initial;
+    width: initial;
+    padding: initial;
+    margin-top: initial;
+  }
+
+  .select-info-type {
+    display: none;
+  }
+
+  .info-type-btn {
+    color: initial;
+    background-color: initial;
+    border: initial;
+    cursor: initial;
+    display: initial;
+    align-items: initial;
+    height: initial;
+    width: initial;
+    padding-left: initial;
+    margin-top: initial;
+    font-family: initial;
+    font-size: initial;
+    font-weight: initial;
+    line-height: initial; 
+    letter-spacing: initial;
+    text-transform: initial;
   }
 
   footer {

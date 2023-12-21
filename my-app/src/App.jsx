@@ -1,5 +1,5 @@
 import './App.css'
-import backgroundImage from '../assets/background-stars.svg';
+// import backgroundImage from '../assets/background-stars.svg';
 import {Route, BrowserRouter, Routes } from 'react-router-dom';
 import Home from './pages/Home';
 import Planet from './pages/Planet'

@@ -36,7 +36,7 @@ function Planet() {
               <img style={{width: '12px', height: '12px'}} src={Source} alt="source" />
             </p>
           </div>
-          <div style={{display: 'none'}}>
+          <div className='select-info-type'>
             {/* Here is overview, internal and surface buttons */}
             <button className='info-type-btn'>
               01 
